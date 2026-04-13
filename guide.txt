@@ -1,0 +1,13 @@
+- ng g module Home
+
+- ng g component Home --module=Home (connects Home component to Home module)
+
+- ng g module Reservation       
+
+- ng g component reservation-form --module=reservation
+
+- ng g component reservation-list --module=reservation
+
+- ng g service reservation/reservation
+
+- ng g i models/reservation

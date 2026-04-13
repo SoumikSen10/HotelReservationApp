@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule} from "@angular/common";
 import { Reservation as reservationModel} from '../models/reservation';
-import {Reservation, Reservation as reservationService} from '../reservation/reservation';
+import {Reservation as reservationService} from '../reservation/reservation';
 import { Router, ActivatedRoute } from '@angular/router';
 import {Home} from "../home/home";
 
@@ -51,7 +51,7 @@ export class ReservationForm implements OnInit {
     {
       let reservation : reservationModel = this.reservationForm.value;
 
-      let id = this.activatedRoute.snapshot.paramMap.get("id")
+      let id = this.activatedRoute.snapshot.paramMap.get("id");
 
       if(id)
       {

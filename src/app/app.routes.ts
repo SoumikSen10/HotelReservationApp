@@ -11,6 +11,6 @@ export const routes: Routes = [
         path : "list", component : ReservationList
     },
     {
-        path : "form", component : ReservationForm
+        path : "new", component : ReservationForm
     }
 ];

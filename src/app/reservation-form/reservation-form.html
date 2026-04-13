@@ -1,3 +1,44 @@
-<form formGroup="reservationForm">
+<app-home></app-home>
 
+<form class="flex flex-col m-2 p-1 border-2 rounded-md h-[300px]" [formGroup] ="reservationForm" (ngSubmit)="onSubmit()">
+    <div class="m-2">
+        <label>Check-In Date : </label>
+        <input class="border-2" type="date" formControlName="checkInDate"/>
+        <small class="text-red-500" *ngIf="reservationForm.get('checkInDate')?.invalid && reservationForm.get('checkInDate')?.touched">
+            Check-In Date is required.
+        </small>
+    </div>
+
+    <div class="m-2">
+        <label>Check-Out Date : </label>
+        <input class="border-2" type="date" formControlName="checkOutDate"/>
+        <small class="text-red-500" *ngIf="reservationForm.get('checkOutDate')?.invalid && reservationForm.get('checkOutDate')?.touched">
+            Check-Out Date is required.
+        </small>
+    </div>
+
+    <div class="m-2">
+        <label>Guest Name : </label>
+        <input class="border-2" type="text" formControlName="guestName"/>
+        <small class="text-red-500" *ngIf="reservationForm.get('guestName')?.invalid && reservationForm.get('guestName')?.touched">
+            Guest Name is required.
+        </small>
+    </div>
+
+    <div class="m-2">
+        <label>Guest Email : </label>
+        <input class="border-2" type="email" formControlName="guestEmail"/>
+        <small class="text-red-500" *ngIf="reservationForm.get('guestEmail')?.invalid && reservationForm.get('guestEmail')?.touched">
+            Guest Email is required.
+        </small>
+    </div>
+    <div class="m-2">
+        <label>Room Number : </label>
+        <input class="border-2" type="number" formControlName="roomNumber"/>
+        <small class="text-red-500" *ngIf="reservationForm.get('roomNumber')?.invalid && reservationForm.get('roomNumber')?.touched">
+            Room Number is required.
+        </small>
+    </div>
+
+    <button class="bg-green-500 border-2 text-white border-white w-1/8 rounded-md h-11 cursor-pointer hover:bg-green-400 m-2" type="submit" [disabled]="reservationForm.invalid">Submit</button>
 </form>

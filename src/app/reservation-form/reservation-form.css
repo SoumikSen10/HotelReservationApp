@@ -1,0 +1,135 @@
+.reservation-shell {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.9), transparent 30%),
+    linear-gradient(135deg, #fff4db 0%, #f6d6b8 45%, #dbe9ff 100%);
+}
+
+.reservation-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.94);
+  box-shadow: 0 24px 60px rgba(94, 63, 29, 0.18);
+}
+
+.reservation-copy h1 {
+  margin: 0.3rem 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: #33211c;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9b5f2b;
+}
+
+.supporting-text {
+  margin: 0;
+  max-width: 52ch;
+  color: #6f5647;
+}
+
+.reservation-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  color: #432d24;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid #d9b696;
+  border-radius: 14px;
+  background: #fffdfa;
+  color: #2f1d18;
+}
+
+.field input:focus {
+  outline: 3px solid rgba(220, 136, 63, 0.22);
+  border-color: #c97d3a;
+}
+
+.field-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.error-text,
+.error-banner {
+  color: #b42318;
+}
+
+.error-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.error-banner,
+.success-banner {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.error-banner {
+  background: #ffe4e1;
+}
+
+.success-banner {
+  color: #0d6832;
+  background: #dff7e5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.actions button:hover {
+  transform: translateY(-1px);
+}
+
+.actions button[type='submit'] {
+  color: #fff7f0;
+  background: linear-gradient(135deg, #8f4a15, #d17f36);
+  box-shadow: 0 10px 24px rgba(169, 102, 39, 0.28);
+}
+
+.secondary-action {
+  color: #6f4a31;
+  background: #f9e6d1;
+}
+
+@media (max-width: 640px) {
+  .reservation-card {
+    padding: 1.25rem;
+  }
+}

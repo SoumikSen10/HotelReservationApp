@@ -12,5 +12,8 @@ export const routes: Routes = [
     },
     {
         path : "new", component : ReservationForm
+    },
+    {
+        path : "edit/:id", component : ReservationForm
     }
 ];

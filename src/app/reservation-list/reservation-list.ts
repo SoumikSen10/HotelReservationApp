@@ -20,16 +20,18 @@ export class ReservationList implements OnInit
   constructor(
     private reservationService : ReservationService,
     private router : Router
-  )
-  {
-  }
+  ){}
 
   ngOnInit(): void {
-      this.reservations = this.reservationService.getReservations();
+      this.reservationService.getReservations().subscribe(data => {
+        this.reservations = data
+      });
   }
 
   deleteReservation(id:string){
-    this.reservationService.deleteReservation(id);
+    this.reservationService.deleteReservation(id).subscribe(()=>{
+      console.log("Delete request got processed.")
+    });
   }
 
 
